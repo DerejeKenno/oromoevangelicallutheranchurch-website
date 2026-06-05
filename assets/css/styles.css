@@ -17,7 +17,7 @@
   --radius-lg: 22px;
   --radius-md: 16px;
   --radius-sm: 12px;
-  --container: 1120px;
+  --container: 1160px;
 }
 
 * {
@@ -156,7 +156,7 @@ iframe {
 }
 
 .hero {
-  padding: 5.25rem 0 4.5rem;
+  padding: 4.5rem 0 4rem;
 }
 
 .hero-refined {
@@ -175,7 +175,7 @@ iframe {
 }
 
 .hero-grid {
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 1.02fr);
+  grid-template-columns: minmax(0, 1fr) minmax(380px, 1.1fr);
   align-items: start;
 }
 
@@ -382,7 +382,7 @@ iframe {
 }
 
 .hero-card-bold {
-  min-height: 590px;
+  min-height: 520px;
   box-shadow: 0 24px 55px rgba(15, 23, 32, 0.14);
 }
 
@@ -392,13 +392,12 @@ iframe {
 }
 
 .hero-card-image-bold {
-  min-height: 430px;
-  background: url('../../home.webp') 26% center/contain no-repeat;
-  background-color: #eef2f5;
+  min-height: 360px;
+  background: url('../../home.webp') center center/cover no-repeat;
 }
 
 .hero-card-content {
-  padding: 1.5rem 1.7rem 1.7rem;
+  padding: 1.5rem 1.75rem 1.75rem;
 }
 
 .hero-card-content-overlay {
@@ -463,7 +462,7 @@ iframe {
 }
 
 .section {
-  padding: 4.6rem 0;
+  padding: 4rem 0;
 }
 
 .section-soft {
@@ -476,7 +475,7 @@ iframe {
 
 .section-heading {
   max-width: 760px;
-  margin: 0 auto 2.35rem;
+  margin: 0 auto 2rem;
 }
 
 .cards {
@@ -496,7 +495,7 @@ iframe {
 .info-panel,
 .ugcs-intro-card,
 .ugcs-text-flow {
-  padding: 1.7rem;
+  padding: 1.75rem;
   border: 1px solid rgba(216, 225, 220, 0.85);
 }
 
@@ -617,7 +616,7 @@ iframe {
 .ministry-image,
 .gallery-preview-image {
   width: 100%;
-  height: 260px;
+  height: 280px;
   object-fit: cover;
   object-position: center center;
   border-radius: var(--radius-lg);
@@ -650,11 +649,11 @@ iframe {
 }
 
 .gallery-preview-section {
-  padding-top: 0;
+  padding-top: 1rem;
 }
 
 .gallery-preview-card {
-  padding: 1rem;
+  padding: 0.75rem;
 }
 
 .gallery-showcase {
@@ -682,17 +681,17 @@ iframe {
 }
 
 .cta-section {
-  padding-top: 0;
+  padding-top: 1rem;
 }
 
 .cta-box {
   background: linear-gradient(135deg, var(--color-primary), #158a58);
   color: #fff;
-  padding: 2.35rem;
+  padding: 2.75rem 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .cta-box .eyebrow,
@@ -703,7 +702,7 @@ iframe {
 .site-footer {
   background: var(--color-footer);
   color: rgba(255, 255, 255, 0.84);
-  padding: 3rem 0 1.5rem;
+  padding: 3.5rem 0 1.75rem;
 }
 
 .footer-grid {
