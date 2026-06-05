@@ -46,6 +46,11 @@ img {
   display: block;
 }
 
+iframe {
+  border: 0;
+  width: 100%;
+}
+
 .container {
   width: min(100% - 2rem, var(--container));
   margin: 0 auto;
@@ -201,7 +206,8 @@ img {
 .card p,
 .split-section p,
 .cta-box p,
-.info-panel p {
+.info-panel p,
+.gallery-item figcaption {
   color: var(--color-muted);
 }
 
@@ -306,7 +312,8 @@ img {
 .card,
 .info-panel,
 .cta-box,
-.gallery-preview-card {
+.gallery-preview-card,
+.gallery-featured {
   background: var(--color-surface);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-card);
@@ -315,7 +322,9 @@ img {
 .hero-card,
 .polished-card,
 .polished-panel,
-.image-card {
+.image-card,
+.gallery-item,
+.gallery-featured {
   border: 1px solid rgba(216, 225, 220, 0.85);
 }
 
@@ -402,11 +411,39 @@ img {
   align-items: center;
 }
 
-.event-date {
+.event-date,
+.sermon-tag {
   display: inline-block;
   margin-bottom: 0.85rem;
   font-weight: 800;
   color: var(--color-secondary);
+}
+
+.sermon-tag {
+  padding: 0.38rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(215, 167, 45, 0.14);
+}
+
+.sermon-card h3 {
+  margin-bottom: 0.6rem;
+}
+
+.contact-panel,
+.map-panel {
+  min-height: 100%;
+}
+
+.map-embed-wrapper {
+  margin-top: 1.25rem;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.map-embed-wrapper iframe {
+  display: block;
+  min-height: 320px;
 }
 
 .ministry-grid .card {
@@ -439,6 +476,27 @@ img {
 
 .gallery-preview-card {
   padding: 1rem;
+}
+
+.gallery-showcase {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.gallery-featured {
+  padding: 1rem;
+}
+
+.gallery-featured img {
+  width: 100%;
+  height: min(68vw, 520px);
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-image);
+}
+
+.gallery-thumbnails {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .cta-section {
@@ -497,13 +555,26 @@ img {
   border-radius: var(--radius-lg);
   background: #fff;
   box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-item:hover,
+.gallery-item-active {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-image);
 }
 
 .gallery-grid img {
   width: 100%;
-  height: 280px;
+  height: 220px;
   object-fit: cover;
   transition: transform 0.3s ease;
+}
+
+.gallery-item figcaption {
+  padding: 0.9rem 1rem 1rem;
+  font-weight: 600;
 }
 
 .gallery-item:hover img {
@@ -518,7 +589,8 @@ img {
   .cards.two-up,
   .cta-box,
   .gallery-grid,
-  .refined-split {
+  .refined-split,
+  .gallery-thumbnails {
     grid-template-columns: 1fr;
   }
 
@@ -561,5 +633,9 @@ img {
 
   .site-nav.open {
     display: flex;
+  }
+
+  .gallery-featured img {
+    height: 320px;
   }
 }

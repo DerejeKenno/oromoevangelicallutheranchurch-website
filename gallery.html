@@ -32,7 +32,7 @@
           <a href="ministries.html">Ministries</a>
           <a href="sermons.html">Sermons</a>
           <a href="events.html">Events</a>
-          <a href="gallery.html">Gallery</a>
+          <a class="active" href="gallery.html">Gallery</a>
           <a href="contact.html">Contact</a>
         </nav>
       </div>
@@ -50,25 +50,37 @@
       </section>
 
       <section class="section gallery-section">
-        <div class="container gallery-grid enhanced-gallery-grid">
-          <figure class="gallery-item">
-            <img src="chlife1.jpg" alt="Church life photo 1" />
-          </figure>
-          <figure class="gallery-item">
-            <img src="chlife2.jpg" alt="Church life photo 2" />
-          </figure>
-          <figure class="gallery-item">
-            <img src="chlife3.jpg" alt="Church life photo 3" />
-          </figure>
-          <figure class="gallery-item">
-            <img src="chlife6.jpg" alt="Church life photo 6" />
-          </figure>
-          <figure class="gallery-item">
-            <img src="moms.jpg" alt="Church life photo 7" />
-          </figure>
-          <figure class="gallery-item">
-            <img src="moms2.jpg" alt="Church life photo 8" />
-          </figure>
+        <div class="container gallery-showcase">
+          <div class="gallery-featured image-card">
+            <img id="featured-gallery-image" src="chlife1.jpg" alt="Church members in worship and fellowship" />
+          </div>
+
+          <div class="gallery-grid enhanced-gallery-grid gallery-thumbnails">
+            <figure class="gallery-item gallery-item-active" data-full="chlife1.jpg" data-alt="Church members in worship and fellowship">
+              <img src="chlife1.jpg" alt="Church members in worship and fellowship" />
+              <figcaption>Worship and fellowship</figcaption>
+            </figure>
+            <figure class="gallery-item" data-full="chlife2.jpg" data-alt="Congregation gathered together in church life">
+              <img src="chlife2.jpg" alt="Congregation gathered together in church life" />
+              <figcaption>Church gathering</figcaption>
+            </figure>
+            <figure class="gallery-item" data-full="chlife3.jpg" data-alt="Church community sharing time together">
+              <img src="chlife3.jpg" alt="Church community sharing time together" />
+              <figcaption>Community life</figcaption>
+            </figure>
+            <figure class="gallery-item" data-full="chlife6.jpg" data-alt="Special moment from church fellowship">
+              <img src="chlife6.jpg" alt="Special moment from church fellowship" />
+              <figcaption>Fellowship moment</figcaption>
+            </figure>
+            <figure class="gallery-item" data-full="moms.jpg" data-alt="Church members gathered in fellowship">
+              <img src="moms.jpg" alt="Church members gathered in fellowship" />
+              <figcaption>Shared fellowship</figcaption>
+            </figure>
+            <figure class="gallery-item" data-full="moms2.jpg" data-alt="Joyful church life and community connection">
+              <img src="moms2.jpg" alt="Joyful church life and community connection" />
+              <figcaption>Church family</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
     </main>
@@ -80,5 +92,18 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+      const featuredImage = document.getElementById('featured-gallery-image');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      galleryItems.forEach((item) => {
+        item.addEventListener('click', () => {
+          galleryItems.forEach((card) => card.classList.remove('gallery-item-active'));
+          item.classList.add('gallery-item-active');
+          featuredImage.src = item.dataset.full;
+          featuredImage.alt = item.dataset.alt;
+        });
+      });
+    </script>
   </body>
 </html>
