@@ -578,11 +578,31 @@ iframe {
 }
 
 .ministry-grid {
-  align-items: start;
+  align-items: stretch;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
 .ministry-grid .card {
   min-height: auto;
+}
+
+.ministry-grid .ministry-card-featured {
+  grid-column: span 6;
+}
+
+.ministry-grid > article:nth-child(2),
+.ministry-grid > article:nth-child(3) {
+  grid-column: span 3;
+}
+
+.ministry-grid > article:nth-child(4),
+.ministry-grid > article:nth-child(5),
+.ministry-grid > article:nth-child(6) {
+  grid-column: span 4;
+}
+
+.ministry-grid > article:nth-child(7) {
+  grid-column: 1 / -1;
 }
 
 .ministry-grid .polished-card {
@@ -595,6 +615,25 @@ iframe {
 
 .ministry-grid .polished-card p {
   margin-bottom: 0;
+}
+
+.ministry-grid .outreach-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 1.5rem;
+  align-items: center;
+}
+
+.ministry-grid .outreach-card h3,
+.ministry-grid .outreach-card p {
+  grid-column: 1;
+}
+
+.ministry-grid .outreach-card .btn {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  margin-top: 0;
+  align-self: center;
 }
 
 .refined-split {
@@ -681,6 +720,11 @@ iframe {
 
 .ugcs-intro-card {
   padding-top: 1.75rem;
+}
+
+.ugcs-intro-card h2 {
+  max-width: none;
+  white-space: nowrap;
 }
 
 .ugcs-intro-card p,
@@ -841,6 +885,24 @@ iframe {
   .hero-card-bold {
     min-height: auto;
   }
+
+  .ministry-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ministry-grid .ministry-card-featured,
+  .ministry-grid > article:nth-child(2),
+  .ministry-grid > article:nth-child(3),
+  .ministry-grid > article:nth-child(4),
+  .ministry-grid > article:nth-child(5),
+  .ministry-grid > article:nth-child(6),
+  .ministry-grid > article:nth-child(7) {
+    grid-column: auto;
+  }
+
+  .ministry-grid .outreach-card {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 900px) {
@@ -872,6 +934,10 @@ iframe {
     max-width: 100%;
   }
 
+  .ugcs-intro-card h2 {
+    white-space: normal;
+  }
+
   .hero-card-image-bold {
     min-height: 310px;
     background-position: 4% center;
@@ -893,6 +959,23 @@ iframe {
 
   .cta-box {
     align-items: flex-start;
+  }
+
+  .ministry-grid,
+  .ministry-grid .outreach-card {
+    grid-template-columns: 1fr;
+  }
+
+  .ministry-grid .outreach-card h3,
+  .ministry-grid .outreach-card p,
+  .ministry-grid .outreach-card .btn {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .ministry-grid .outreach-card .btn {
+    align-self: flex-start;
+    margin-top: 0.25rem;
   }
 
   .nav-toggle {
