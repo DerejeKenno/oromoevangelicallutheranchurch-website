@@ -174,6 +174,16 @@ iframe {
   align-items: center;
 }
 
+.hero-grid-enhanced {
+  align-items: stretch;
+}
+
+.hero-visual-stack {
+  display: grid;
+  gap: 1.25rem;
+  align-content: center;
+}
+
 .hero-copy h1,
 .page-hero h1,
 .section-heading h2,
@@ -318,7 +328,8 @@ iframe {
 .info-panel,
 .cta-box,
 .gallery-preview-card,
-.gallery-featured {
+.gallery-featured,
+.secondary-hero-card {
   background: var(--color-surface);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-card);
@@ -329,12 +340,19 @@ iframe {
 .polished-panel,
 .image-card,
 .gallery-item,
-.gallery-featured {
+.gallery-featured,
+.secondary-hero-card {
   border: 1px solid rgba(216, 225, 220, 0.85);
 }
 
 .hero-card {
   overflow: hidden;
+}
+
+.hero-card-bold {
+  position: relative;
+  min-height: 560px;
+  box-shadow: 0 30px 70px rgba(15, 23, 32, 0.2);
 }
 
 .hero-card-image {
@@ -344,17 +362,76 @@ iframe {
     url('../../home.webp') center/cover;
 }
 
+.hero-card-image-bold {
+  min-height: 560px;
+  background:
+    linear-gradient(180deg, rgba(4, 19, 13, 0.08) 0%, rgba(4, 19, 13, 0.52) 58%, rgba(4, 19, 13, 0.82) 100%),
+    radial-gradient(circle at top, rgba(215, 167, 45, 0.18), transparent 42%),
+    url('../../home.webp') center center/cover;
+  filter: saturate(1.15) contrast(1.08) brightness(0.9);
+  transform: scale(1.02);
+}
+
 .hero-card-content {
   padding: 1.75rem;
+}
+
+.hero-card-content-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 1;
+  padding: 2rem;
+  background: linear-gradient(180deg, rgba(7, 24, 17, 0) 0%, rgba(7, 24, 17, 0.78) 100%);
+  color: #fff;
 }
 
 .hero-card-content h2 {
   margin-bottom: 0.75rem;
 }
 
+.hero-card-content-overlay .eyebrow,
+.hero-card-content-overlay p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
 .text-link {
   color: var(--color-primary);
   font-weight: 700;
+}
+
+.text-link-light {
+  color: #fff;
+}
+
+.secondary-hero-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 260px;
+}
+
+.secondary-hero-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  filter: saturate(1.18) contrast(1.06) brightness(0.92);
+}
+
+.secondary-hero-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1.5rem;
+  background: linear-gradient(180deg, rgba(7, 24, 17, 0) 0%, rgba(7, 24, 17, 0.78) 100%);
+  color: #fff;
+}
+
+.secondary-hero-overlay .eyebrow {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.secondary-hero-overlay h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.2;
 }
 
 .section {
@@ -627,6 +704,15 @@ iframe {
 
   .hero {
     padding-top: 4.25rem;
+  }
+
+  .hero-card-bold,
+  .hero-card-image-bold {
+    min-height: 420px;
+  }
+
+  .secondary-hero-image {
+    height: 260px;
   }
 
   .service-times-highlight li {
