@@ -86,10 +86,12 @@ iframe {
   height: 64px;
   border-radius: 50%;
   background: linear-gradient(135deg, #dff7ee 0%, #edfaff 100%);
-  color: var(--color-primary);
+  color: #c62828;
   display: grid;
   place-items: center;
-  font-size: 1.7rem;
+  font-size: 2.35rem;
+  font-weight: 800;
+  line-height: 1;
   border: 1px solid rgba(135, 201, 176, 0.72);
   box-shadow: 0 10px 26px rgba(39, 150, 121, 0.14);
   flex-shrink: 0;
@@ -398,12 +400,12 @@ iframe {
 
 .hero-card-image {
   min-height: 420px;
-  background: url('../../home.webp') 24% center/cover no-repeat;
+  background: url('../../home.webp') left center/cover no-repeat;
 }
 
 .hero-card-image-bold {
   min-height: 330px;
-  background: url('../../home.webp') 22% center/cover no-repeat;
+  background: url('../../home.webp') 5% center/cover no-repeat;
 }
 
 .hero-card-content {
@@ -570,10 +572,29 @@ iframe {
 }
 
 .ministry-balance-grid .balanced-card,
-.ministry-grid .card,
 .event-card,
 .sermon-card {
   min-height: 100%;
+}
+
+.ministry-grid {
+  align-items: start;
+}
+
+.ministry-grid .card {
+  min-height: auto;
+}
+
+.ministry-grid .polished-card {
+  padding: 1.35rem 1.5rem;
+}
+
+.ministry-grid .polished-card h3 {
+  margin-bottom: 0.55rem;
+}
+
+.ministry-grid .polished-card p {
+  margin-bottom: 0;
 }
 
 .refined-split {
@@ -709,18 +730,22 @@ iframe {
 }
 
 .cta-box {
-  background: linear-gradient(135deg, var(--color-primary), #158a58);
-  color: #fff;
+  background: linear-gradient(135deg, #dff7ee 0%, #eefaf4 52%, #f7fcff 100%);
+  color: var(--color-text);
   padding: 2.75rem 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  border-color: rgba(135, 201, 176, 0.55);
 }
 
-.cta-box .eyebrow,
+.cta-box .eyebrow {
+  color: var(--color-primary);
+}
+
 .cta-box p {
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--color-muted);
 }
 
 .site-footer {
@@ -849,7 +874,7 @@ iframe {
 
   .hero-card-image-bold {
     min-height: 310px;
-    background-position: 20% center;
+    background-position: 4% center;
     background-size: cover;
   }
 
