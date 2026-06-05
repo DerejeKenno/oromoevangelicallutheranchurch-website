@@ -33,6 +33,7 @@
           <a href="sermons.html">Sermons</a>
           <a href="events.html">Events</a>
           <a class="active" href="gallery.html">Gallery</a>
+          <a href="ugcs.html">UGCS</a>
           <a href="contact.html">Contact</a>
         </nav>
       </div>
@@ -40,42 +41,47 @@
 
     <main class="page-main">
       <section class="page-hero">
-        <div class="container">
+        <div class="container centered-heading">
           <span class="eyebrow">Gallery</span>
-          <h1>Photos from church life and fellowship.</h1>
+          <h1>Moments from worship, fellowship, and church life.</h1>
           <p>
-            Explore moments from worship, gatherings, and community life at Oromo Evangelical
-            Lutheran Church.
+            Explore photos from gatherings and special moments at Oromo Evangelical Lutheran Church.
           </p>
         </div>
       </section>
 
       <section class="section gallery-section">
-        <div class="container gallery-grid">
-          <figure class="gallery-item">
-            <img src="chlife1.jpg" alt="Church members gathered during worship" />
-            <figcaption>Worship gathering</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="chlife2.jpg" alt="Congregation fellowship after church service" />
-            <figcaption>Church fellowship</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="chlife3.jpg" alt="Community moments during church life" />
-            <figcaption>Community life</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="chlife6.jpg" alt="Church gathering and ministry activity" />
-            <figcaption>Ministry gathering</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="moms.jpg" alt="Mothers participating in church fellowship" />
-            <figcaption>Family fellowship</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="moms2.jpg" alt="Church family sharing fellowship moments" />
-            <figcaption>Church family moments</figcaption>
-          </figure>
+        <div class="container gallery-showcase">
+          <div class="gallery-featured image-card">
+            <img id="featured-gallery-image" src="chlife1.jpg" alt="Church members in worship and fellowship" />
+          </div>
+
+          <div class="gallery-grid enhanced-gallery-grid gallery-thumbnails">
+            <figure class="gallery-item gallery-item-active" data-full="chlife1.jpg" data-alt="Church members in worship and fellowship">
+              <img src="chlife1.jpg" alt="Church members in worship and fellowship" />
+              <figcaption>Worship and fellowship</figcaption>
+            </figure>
+            <figure class="gallery-item" data-full="chlife2.jpg" data-alt="Congregation gathered together in church life">
+              <img src="chlife2.jpg" alt="Congregation gathered together in church life" />
+              <figcaption>Church gathering</figcaption>
+            </figure>
+            <figure class="gallery-item" data-full="chlife3.jpg" data-alt="Church community sharing time together">
+              <img src="chlife3.jpg" alt="Church community sharing time together" />
+              <figcaption>Community life</figcaption>
+            </figure>
+            <figure class="gallery-item" data-full="chlife6.jpg" data-alt="Special moment from church fellowship">
+              <img src="chlife6.jpg" alt="Special moment from church fellowship" />
+              <figcaption>Fellowship moment</figcaption>
+            </figure>
+            <figure class="gallery-item" data-full="moms.jpg" data-alt="Church members gathered in fellowship">
+              <img src="moms.jpg" alt="Church members gathered in fellowship" />
+              <figcaption>Shared fellowship</figcaption>
+            </figure>
+            <figure class="gallery-item" data-full="moms2.jpg" data-alt="Joyful church life and community connection">
+              <img src="moms2.jpg" alt="Joyful church life and community connection" />
+              <figcaption>Church family</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
     </main>
@@ -87,5 +93,18 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+      const featuredImage = document.getElementById('featured-gallery-image');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      galleryItems.forEach((item) => {
+        item.addEventListener('click', () => {
+          galleryItems.forEach((card) => card.classList.remove('gallery-item-active'));
+          item.classList.add('gallery-item-active');
+          featuredImage.src = item.dataset.full;
+          featuredImage.alt = item.dataset.alt;
+        });
+      });
+    </script>
   </body>
 </html>
