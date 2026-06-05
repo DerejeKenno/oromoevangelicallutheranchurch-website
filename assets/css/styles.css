@@ -17,7 +17,7 @@
   --radius-lg: 22px;
   --radius-md: 16px;
   --radius-sm: 12px;
-  --container: 1160px;
+  --container: 1200px;
 }
 
 * {
@@ -156,7 +156,7 @@ iframe {
 }
 
 .hero {
-  padding: 4.5rem 0 4rem;
+  padding: 4.25rem 0 4rem;
 }
 
 .hero-refined {
@@ -164,7 +164,7 @@ iframe {
 }
 
 .page-hero {
-  padding: 4.5rem 0 3rem;
+  padding: 4.25rem 0 3rem;
 }
 
 .hero-grid,
@@ -175,8 +175,9 @@ iframe {
 }
 
 .hero-grid {
-  grid-template-columns: minmax(0, 1fr) minmax(380px, 1.1fr);
+  grid-template-columns: minmax(520px, 1.04fr) minmax(430px, 0.96fr);
   align-items: start;
+  gap: 3rem;
 }
 
 .hero-grid-enhanced {
@@ -190,7 +191,8 @@ iframe {
 }
 
 .hero-copy {
-  padding-right: 0.5rem;
+  padding-right: 0;
+  align-self: center;
 }
 
 .hero-copy h1,
@@ -202,26 +204,30 @@ iframe {
   line-height: 1.08;
   margin: 0 0 1rem;
   letter-spacing: -0.03em;
+  text-wrap: balance;
 }
 
 .hero-copy h1 {
-  font-size: clamp(2.2rem, 4vw, 3.5rem);
-  max-width: 12ch;
-  text-wrap: balance;
+  font-size: clamp(2.15rem, 3.35vw, 3.05rem);
+  max-width: 22ch;
 }
 
 .hero-lead {
-  font-size: 1.08rem;
-  max-width: 54ch;
+  font-size: 1.06rem;
+  max-width: 58ch;
 }
 
 .page-hero h1,
-.section-heading h2,
 .split-section h2,
 .cta-box h2,
 .ugcs-intro-card h2 {
-  font-size: clamp(1.9rem, 3.8vw, 2.8rem);
-  text-wrap: balance;
+  font-size: clamp(1.85rem, 3vw, 2.55rem);
+  max-width: 24ch;
+}
+
+.section-heading h2 {
+  font-size: clamp(1.8rem, 2.55vw, 2.2rem);
+  max-width: 100%;
 }
 
 .hero-copy p,
@@ -236,6 +242,7 @@ iframe {
 .ugcs-intro-card p,
 .outreach-link-copy {
   color: var(--color-muted);
+  text-wrap: pretty;
 }
 
 .hero-copy p {
@@ -254,18 +261,20 @@ iframe {
 
 .centered-heading {
   text-align: center;
-  max-width: 820px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
-.page-hero .centered-heading h1 {
-  max-width: 16ch;
+.page-hero .centered-heading h1,
+.page-hero .container > h1 {
   margin-left: auto;
   margin-right: auto;
 }
 
-.page-hero .centered-heading p {
-  max-width: 60ch;
+.page-hero .centered-heading p,
+.page-hero .container > p,
+.section-heading p {
+  max-width: 62ch;
   margin-left: auto;
   margin-right: auto;
 }
@@ -331,7 +340,7 @@ iframe {
 .service-times-highlight {
   display: grid;
   gap: 0.9rem;
-  max-width: 520px;
+  max-width: 540px;
 }
 
 .service-times-highlight li {
@@ -382,7 +391,7 @@ iframe {
 }
 
 .hero-card-bold {
-  min-height: 520px;
+  min-height: 500px;
   box-shadow: 0 24px 55px rgba(15, 23, 32, 0.14);
 }
 
@@ -392,8 +401,8 @@ iframe {
 }
 
 .hero-card-image-bold {
-  min-height: 360px;
-  background: url('../../home.webp') center center/cover no-repeat;
+  min-height: 350px;
+  background: url('../../home.webp') 38% center/cover no-repeat;
 }
 
 .hero-card-content {
@@ -410,6 +419,7 @@ iframe {
 
 .hero-card-content h2 {
   margin-bottom: 0.75rem;
+  text-wrap: balance;
 }
 
 .hero-card-content-overlay .eyebrow,
@@ -474,13 +484,14 @@ iframe {
 }
 
 .section-heading {
-  max-width: 760px;
+  max-width: 980px;
   margin: 0 auto 2rem;
 }
 
 .cards {
   display: grid;
   gap: 1.5rem;
+  align-items: stretch;
 }
 
 .cards.three-up {
@@ -549,7 +560,10 @@ iframe {
   gap: 0.8rem;
 }
 
-.ministry-balance-grid .balanced-card {
+.ministry-balance-grid .balanced-card,
+.ministry-grid .card,
+.event-card,
+.sermon-card {
   min-height: 100%;
 }
 
@@ -596,10 +610,6 @@ iframe {
 .map-embed-wrapper iframe {
   display: block;
   min-height: 320px;
-}
-
-.ministry-grid .card {
-  min-height: 100%;
 }
 
 .ministry-card {
@@ -780,8 +790,21 @@ iframe {
   background: #fff;
 }
 
+@media (max-width: 1080px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy h1 {
+    max-width: 100%;
+  }
+
+  .hero-card-bold {
+    min-height: auto;
+  }
+}
+
 @media (max-width: 900px) {
-  .hero-grid,
   .split-section,
   .footer-grid,
   .cards.three-up,
@@ -798,16 +821,21 @@ iframe {
   }
 
   .hero-copy h1 {
+    font-size: clamp(2rem, 11vw, 2.65rem);
     max-width: 100%;
   }
 
-  .hero-card-bold {
-    min-height: auto;
+  .page-hero h1,
+  .section-heading h2,
+  .split-section h2,
+  .cta-box h2,
+  .ugcs-intro-card h2 {
+    max-width: 100%;
   }
 
   .hero-card-image-bold {
     min-height: 320px;
-    background-position: 30% center;
+    background-position: 28% center;
     background-size: cover;
   }
 
