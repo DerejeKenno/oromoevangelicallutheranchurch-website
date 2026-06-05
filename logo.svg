@@ -11,7 +11,7 @@
       <stop offset="0.52" stop-color="#8fddff"/>
       <stop offset="1" stop-color="#d5f3ff"/>
     </linearGradient>
-    <path id="topTextArc" d="M 15 56 A 35 35 0 0 1 85 56"/>
+    <path id="topTextArc" d="M 7 55 A 43 43 0 0 1 93 55"/>
     <clipPath id="circleClip">
       <circle cx="50" cy="50" r="47"/>
     </clipPath>
@@ -32,21 +32,21 @@
     <ellipse cx="31" cy="70" rx="18" ry="6" fill="#ffffff" opacity="0.58"/>
     <ellipse cx="77" cy="33" rx="14" ry="5" fill="#ffffff" opacity="0.48"/>
 
-    <!-- Red cross based on the attached church cross silhouette. -->
+    <!-- Centered red cross based on the attached church cross silhouette. -->
     <g fill="#c62828">
-      <polygon points="49,14 61,6 61,84 49,94"/>
-      <polygon points="41,21 49,14 49,94 41,88"/>
-      <polygon points="18,38 49,38 49,48 12,48"/>
-      <polygon points="61,38 88,38 82,48 61,48"/>
-      <polygon points="31,29 49,29 49,37 23,37"/>
-      <polygon points="61,29 80,29 86,37 61,37"/>
+      <polygon points="48,31 57,25 57,77 48,84"/>
+      <polygon points="42,36 48,31 48,84 42,79"/>
+      <polygon points="24,47 48,47 48,55 19,55"/>
+      <polygon points="57,47 80,47 75,55 57,55"/>
+      <polygon points="34,40 48,40 48,46 27,46"/>
+      <polygon points="57,40 72,40 77,46 57,46"/>
     </g>
   </g>
 
   <circle cx="50" cy="50" r="48" fill="none" stroke="#ffffff" stroke-width="4"/>
-  <circle cx="50" cy="50" r="40.5" fill="none" stroke="#ffffff" stroke-opacity="0.75" stroke-width="1"/>
+  <circle cx="50" cy="50" r="42" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="1"/>
 
-  <text font-family="Inter, Arial, sans-serif" font-size="5.2" font-weight="800" letter-spacing="0.7" fill="#ffffff">
+  <text font-family="Inter, Arial, sans-serif" font-size="4.2" font-weight="800" letter-spacing="0.45" fill="#ffffff">
     <textPath href="#topTextArc" startOffset="50%" text-anchor="middle">OROMO EVANGELICAL LUTHERAN CHURCH</textPath>
   </text>
 </svg>
