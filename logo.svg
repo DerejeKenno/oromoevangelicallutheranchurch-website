@@ -16,15 +16,15 @@
     <ellipse cx="31" cy="70" rx="18" ry="6" fill="#ffffff" opacity="0.58"/>
     <ellipse cx="77" cy="33" rx="14" ry="5" fill="#ffffff" opacity="0.48"/>
 
-    <!-- Uniform single red cross with consistent horizontal and vertical edges. -->
+    <!-- Uniform single red cross with the horizontal plane placed higher on the vertical plane. -->
     <path
-      d="M45 24 L55 24 L55 45 L77 45 L77 55 L55 55 L55 82 L45 82 L45 55 L23 55 L23 45 L45 45 Z"
+      d="M45 24 L55 24 L55 39 L77 39 L77 49 L55 49 L55 82 L45 82 L45 49 L23 49 L23 39 L45 39 Z"
       fill="#c62828"
     />
   </g>
 
   <circle cx="50" cy="50" r="48" fill="none" stroke="#ffffff" stroke-width="4"/>
-  <circle cx="50" cy="50" r="42" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="1"/>
+  <circle cx="50" cy="50" r="49" fill="none" stroke="#ffffff" stroke-opacity="0.78" stroke-width="1"/>
 
   <text font-family="Inter, Arial, sans-serif" font-size="4.2" font-weight="800" letter-spacing="0.45" fill="#ffffff">
     <textPath href="#topTextArc" startOffset="50%" text-anchor="middle">OROMO EVANGELICAL LUTHERAN CHURCH</textPath>
