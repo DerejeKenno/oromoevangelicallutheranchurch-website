@@ -3,15 +3,17 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  width: 70px;
+  height: 70px;
   background:
-    radial-gradient(circle at 30% 24%, rgba(255, 244, 190, 0.9) 0 10%, transparent 22%),
+    radial-gradient(circle at 30% 24%, rgba(255, 244, 190, 0.92) 0 11%, transparent 23%),
     radial-gradient(ellipse at 25% 68%, rgba(255, 255, 255, 0.92) 0 12%, transparent 24%),
     radial-gradient(ellipse at 72% 32%, rgba(255, 255, 255, 0.86) 0 13%, transparent 25%),
     linear-gradient(160deg, #cdefff 0%, #e9f8ff 48%, #f7fcff 100%);
   color: #c62828;
   border: 1px solid rgba(126, 196, 232, 0.72);
   box-shadow:
-    0 10px 26px rgba(83, 172, 215, 0.16),
+    0 11px 28px rgba(83, 172, 215, 0.17),
     inset 0 1px 10px rgba(255, 255, 255, 0.72);
 }
 
@@ -26,26 +28,26 @@
 }
 
 .brand-mark-home::before {
-  width: 30px;
-  height: 10px;
+  width: 33px;
+  height: 11px;
   left: 7px;
-  top: 37px;
-  box-shadow: 8px -3px 0 1px rgba(255, 255, 255, 0.58);
+  top: 40px;
+  box-shadow: 9px -3px 0 1px rgba(255, 255, 255, 0.58);
 }
 
 .brand-mark-home::after {
-  width: 26px;
-  height: 9px;
+  width: 29px;
+  height: 10px;
   right: 6px;
-  top: 19px;
-  box-shadow: -7px 4px 0 0 rgba(255, 255, 255, 0.55);
+  top: 20px;
+  box-shadow: -8px 4px 0 0 rgba(255, 255, 255, 0.55);
 }
 
 .brand-mark-home .cross-symbol {
   position: relative;
   z-index: 2;
   display: block;
-  font-size: 2.22rem;
+  font-size: 2.46rem;
   line-height: 1;
   text-shadow: 0 1px 2px rgba(198, 40, 40, 0.18);
 }
@@ -53,13 +55,13 @@
 .brand-mark-home .time-label {
   position: absolute;
   z-index: 3;
-  bottom: 8px;
+  top: 28px;
   font-size: 0.45rem;
   font-weight: 800;
   line-height: 1;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   color: rgba(29, 73, 108, 0.78);
-  text-transform: uppercase;
+  text-transform: none;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
 }
 
