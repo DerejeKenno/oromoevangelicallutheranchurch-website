@@ -352,7 +352,7 @@ iframe {
 .hero-card-bold {
   position: relative;
   min-height: 560px;
-  box-shadow: 0 30px 70px rgba(15, 23, 32, 0.2);
+  box-shadow: 0 30px 70px rgba(15, 23, 32, 0.22);
 }
 
 .hero-card-image {
@@ -365,11 +365,13 @@ iframe {
 .hero-card-image-bold {
   min-height: 560px;
   background:
-    linear-gradient(180deg, rgba(4, 19, 13, 0.08) 0%, rgba(4, 19, 13, 0.52) 58%, rgba(4, 19, 13, 0.82) 100%),
-    radial-gradient(circle at top, rgba(215, 167, 45, 0.18), transparent 42%),
-    url('../../home.webp') center center/cover;
-  filter: saturate(1.15) contrast(1.08) brightness(0.9);
-  transform: scale(1.02);
+    linear-gradient(180deg, rgba(24, 6, 8, 0.08) 0%, rgba(39, 10, 12, 0.28) 28%, rgba(63, 16, 18, 0.48) 58%, rgba(26, 8, 10, 0.86) 100%),
+    radial-gradient(circle at 62% 32%, rgba(255, 244, 239, 0.34), transparent 18%),
+    radial-gradient(circle at 68% 38%, rgba(255, 224, 214, 0.26), transparent 24%),
+    radial-gradient(circle at top, rgba(255, 247, 243, 0.22), transparent 42%),
+    url('../../home.webp') 64% center/cover;
+  filter: saturate(1.22) contrast(1.08) brightness(0.98) sepia(0.12) hue-rotate(-8deg);
+  transform: scale(1.045);
 }
 
 .hero-card-content {
@@ -381,7 +383,7 @@ iframe {
   inset: auto 0 0 0;
   z-index: 1;
   padding: 2rem;
-  background: linear-gradient(180deg, rgba(7, 24, 17, 0) 0%, rgba(7, 24, 17, 0.78) 100%);
+  background: linear-gradient(180deg, rgba(7, 24, 17, 0) 0%, rgba(29, 8, 10, 0.82) 100%);
   color: #fff;
 }
 
@@ -391,7 +393,7 @@ iframe {
 
 .hero-card-content-overlay .eyebrow,
 .hero-card-content-overlay p {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 245, 241, 0.92);
 }
 
 .text-link {
@@ -400,7 +402,7 @@ iframe {
 }
 
 .text-link-light {
-  color: #fff;
+  color: #fff7f3;
 }
 
 .secondary-hero-card {
@@ -413,19 +415,21 @@ iframe {
   width: 100%;
   height: 320px;
   object-fit: cover;
-  filter: saturate(1.18) contrast(1.06) brightness(0.92);
+  object-position: center 28%;
+  filter: saturate(1.22) contrast(1.05) brightness(0.99) sepia(0.1) hue-rotate(-6deg);
+  transform: scale(1.03);
 }
 
 .secondary-hero-overlay {
   position: absolute;
   inset: auto 0 0 0;
   padding: 1.5rem;
-  background: linear-gradient(180deg, rgba(7, 24, 17, 0) 0%, rgba(7, 24, 17, 0.78) 100%);
+  background: linear-gradient(180deg, rgba(7, 24, 17, 0) 0%, rgba(34, 8, 10, 0.8) 100%);
   color: #fff;
 }
 
 .secondary-hero-overlay .eyebrow {
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 242, 236, 0.84);
 }
 
 .secondary-hero-overlay h3 {
