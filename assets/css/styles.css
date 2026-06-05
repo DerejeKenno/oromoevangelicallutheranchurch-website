@@ -85,12 +85,13 @@ iframe {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-primary), #158a58);
-  color: #fff;
+  background: linear-gradient(135deg, #dff7ee 0%, #edfaff 100%);
+  color: var(--color-primary);
   display: grid;
   place-items: center;
   font-size: 1.7rem;
-  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(135, 201, 176, 0.72);
+  box-shadow: 0 10px 26px rgba(39, 150, 121, 0.14);
   flex-shrink: 0;
 }
 
@@ -201,19 +202,19 @@ iframe {
 .split-section h2,
 .cta-box h2,
 .ugcs-intro-card h2 {
-  line-height: 1.08;
+  line-height: 1.12;
   margin: 0 0 1rem;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
   text-wrap: balance;
 }
 
 .hero-copy h1 {
-  font-size: clamp(2.15rem, 3.35vw, 3.05rem);
-  max-width: 22ch;
+  font-size: clamp(1.75rem, 2.25vw, 2.1rem);
+  max-width: 24ch;
 }
 
 .hero-lead {
-  font-size: 1.06rem;
+  font-size: 1.02rem;
   max-width: 58ch;
 }
 
@@ -221,12 +222,12 @@ iframe {
 .split-section h2,
 .cta-box h2,
 .ugcs-intro-card h2 {
-  font-size: clamp(1.85rem, 3vw, 2.55rem);
-  max-width: 24ch;
+  font-size: clamp(1.55rem, 2.25vw, 2rem);
+  max-width: 28ch;
 }
 
 .section-heading h2 {
-  font-size: clamp(1.8rem, 2.55vw, 2.2rem);
+  font-size: clamp(1.45rem, 2vw, 1.8rem);
   max-width: 100%;
 }
 
@@ -282,8 +283,8 @@ iframe {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin: 1.8rem 0 1.6rem;
+  gap: 0.75rem;
+  margin: 1.45rem 0 1.45rem;
 }
 
 .btn {
@@ -291,31 +292,31 @@ iframe {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  padding: 0.95rem 1.45rem;
+  padding: 0.58rem 0.92rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  line-height: 1.2;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
 .btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
-.btn-primary {
-  background: var(--color-primary);
-  color: #fff;
-  box-shadow: 0 12px 30px rgba(11, 93, 59, 0.2);
-}
-
-.btn-primary:hover {
-  background: var(--color-primary-dark);
-}
-
+.btn-primary,
 .btn-secondary,
 .btn-light {
-  background: #fff;
-  color: var(--color-text);
-  border: 1px solid rgba(216, 225, 220, 0.9);
-  box-shadow: 0 10px 24px rgba(15, 23, 32, 0.04);
+  background: #f5f8fb;
+  color: #1f67a7;
+  border: 1px solid #dce7ef;
+  box-shadow: 0 8px 18px rgba(15, 23, 32, 0.035);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-light:hover {
+  background: #eef5fb;
+  color: #155a96;
 }
 
 .btn-light {
@@ -348,7 +349,7 @@ iframe {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.95rem 1.15rem;
+  padding: 0.9rem 1.1rem;
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(216, 225, 220, 0.9);
@@ -391,22 +392,22 @@ iframe {
 }
 
 .hero-card-bold {
-  min-height: 500px;
-  box-shadow: 0 24px 55px rgba(15, 23, 32, 0.14);
+  min-height: 470px;
+  box-shadow: 0 20px 44px rgba(15, 23, 32, 0.12);
 }
 
 .hero-card-image {
   min-height: 420px;
-  background: url('../../home.webp') center/cover;
+  background: url('../../home.webp') 24% center/cover no-repeat;
 }
 
 .hero-card-image-bold {
-  min-height: 350px;
-  background: url('../../home.webp') 38% center/cover no-repeat;
+  min-height: 330px;
+  background: url('../../home.webp') 22% center/cover no-repeat;
 }
 
 .hero-card-content {
-  padding: 1.5rem 1.75rem 1.75rem;
+  padding: 1.25rem 1.55rem 1.55rem;
 }
 
 .hero-card-content-overlay {
@@ -418,8 +419,15 @@ iframe {
 }
 
 .hero-card-content h2 {
-  margin-bottom: 0.75rem;
+  margin: 0 0 0.7rem;
+  font-size: clamp(1.18rem, 1.55vw, 1.42rem);
+  line-height: 1.22;
+  letter-spacing: -0.015em;
   text-wrap: balance;
+}
+
+.hero-card-content p {
+  font-size: 0.98rem;
 }
 
 .hero-card-content-overlay .eyebrow,
@@ -428,12 +436,13 @@ iframe {
 }
 
 .text-link {
-  color: var(--color-primary);
+  color: #1f67a7;
   font-weight: 700;
+  font-size: 0.95rem;
 }
 
 .text-link-light {
-  color: var(--color-primary);
+  color: #1f67a7;
 }
 
 .secondary-hero-card {
@@ -466,7 +475,7 @@ iframe {
 
 .secondary-hero-overlay h3 {
   margin: 0;
-  font-size: 1.28rem;
+  font-size: 1.18rem;
   line-height: 1.25;
   text-wrap: balance;
 }
@@ -620,7 +629,7 @@ iframe {
 }
 
 .ministry-card-featured {
-  padding: 1.1rem;
+  padding: 1rem;
 }
 
 .ministry-image,
@@ -630,9 +639,14 @@ iframe {
   object-fit: cover;
   object-position: center center;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-image);
-  filter: none;
+  box-shadow: 0 16px 36px rgba(15, 23, 32, 0.11);
+  filter: saturate(1.06) contrast(1.03) brightness(1.02);
   transform: none;
+}
+
+.ministry-image {
+  height: 300px;
+  object-position: center 42%;
 }
 
 .ugcs-section {
@@ -821,7 +835,7 @@ iframe {
   }
 
   .hero-copy h1 {
-    font-size: clamp(2rem, 11vw, 2.65rem);
+    font-size: clamp(1.7rem, 8vw, 2.15rem);
     max-width: 100%;
   }
 
@@ -834,8 +848,8 @@ iframe {
   }
 
   .hero-card-image-bold {
-    min-height: 320px;
-    background-position: 28% center;
+    min-height: 310px;
+    background-position: 20% center;
     background-size: cover;
   }
 
