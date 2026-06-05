@@ -255,7 +255,8 @@ img {
 .hero-card,
 .card,
 .info-panel,
-.cta-box {
+.cta-box,
+.gallery-preview-card {
   background: var(--color-surface);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
@@ -339,11 +340,21 @@ img {
   gap: 1rem;
 }
 
-.ministry-image {
+.ministry-image,
+.gallery-preview-image {
   width: 100%;
   height: 220px;
   object-fit: cover;
   border-radius: var(--radius-md);
+}
+
+.gallery-preview-section {
+  padding-top: 0;
+}
+
+.gallery-preview-card {
+  padding: 1rem;
+  border: 1px solid rgba(216, 225, 220, 0.85);
 }
 
 .cta-section {
