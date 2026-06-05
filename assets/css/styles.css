@@ -188,7 +188,8 @@ iframe {
 .page-hero h1,
 .section-heading h2,
 .split-section h2,
-.cta-box h2 {
+.cta-box h2,
+.ugcs-intro-card h2 {
   line-height: 1.08;
   margin: 0 0 1rem;
   letter-spacing: -0.02em;
@@ -207,7 +208,8 @@ iframe {
 .page-hero h1,
 .section-heading h2,
 .split-section h2,
-.cta-box h2 {
+.cta-box h2,
+.ugcs-intro-card h2 {
   font-size: clamp(2rem, 4vw, 3rem);
 }
 
@@ -218,7 +220,10 @@ iframe {
 .split-section p,
 .cta-box p,
 .info-panel p,
-.gallery-item figcaption {
+.gallery-item figcaption,
+.ugcs-text-flow p,
+.ugcs-intro-card p,
+.outreach-link-copy {
   color: var(--color-muted);
 }
 
@@ -329,7 +334,9 @@ iframe {
 .cta-box,
 .gallery-preview-card,
 .gallery-featured,
-.secondary-hero-card {
+.secondary-hero-card,
+.ugcs-intro-card,
+.ugcs-text-flow {
   background: var(--color-surface);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-card);
@@ -341,7 +348,9 @@ iframe {
 .image-card,
 .gallery-item,
 .gallery-featured,
-.secondary-hero-card {
+.secondary-hero-card,
+.ugcs-intro-card,
+.ugcs-text-flow {
   border: 1px solid rgba(216, 225, 220, 0.85);
 }
 
@@ -469,7 +478,9 @@ iframe {
 }
 
 .card,
-.info-panel {
+.info-panel,
+.ugcs-intro-card,
+.ugcs-text-flow {
   padding: 1.7rem;
   border: 1px solid rgba(216, 225, 220, 0.85);
 }
@@ -495,6 +506,22 @@ iframe {
 .feature-card,
 .polished-card {
   background: linear-gradient(180deg, #ffffff 0%, #fbfdfb 100%);
+}
+
+.outreach-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.outreach-link-copy {
+  margin-top: 0.15rem;
+  margin-bottom: 1.15rem;
+}
+
+.outreach-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .refined-split {
@@ -564,6 +591,29 @@ iframe {
   object-fit: cover;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-image);
+}
+
+.ugcs-section {
+  padding-top: 2.5rem;
+}
+
+.ugcs-content {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.ugcs-intro-card {
+  padding-top: 1.75rem;
+}
+
+.ugcs-intro-card p,
+.ugcs-text-flow p {
+  margin: 0;
+}
+
+.ugcs-text-flow {
+  display: grid;
+  gap: 1.1rem;
 }
 
 .gallery-preview-section {
