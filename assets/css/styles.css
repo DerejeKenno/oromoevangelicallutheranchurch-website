@@ -5,7 +5,7 @@
   --color-text: #1d2939;
   --color-muted: #526071;
   --color-surface: #ffffff;
-  --color-surface-alt: #f4f8f6;
+  --color-surface-alt: #eef4fb;
   --color-border: #d8e1dc;
   --color-footer: #0f1720;
   --color-shadow: rgba(15, 23, 32, 0.08);
@@ -32,7 +32,7 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   color: var(--color-text);
-  background: linear-gradient(180deg, #fcfdfc 0%, #f7faf8 100%);
+  background: linear-gradient(180deg, #f6fbff 0%, #eef5fb 100%);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -71,7 +71,7 @@ iframe {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  min-height: 88px;
+  min-height: 96px;
 }
 
 .brand {
@@ -82,14 +82,14 @@ iframe {
 }
 
 .brand-mark {
-  width: 56px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--color-primary), #158a58);
   color: #fff;
   display: grid;
   place-items: center;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   box-shadow: var(--shadow-soft);
   flex-shrink: 0;
 }
@@ -97,11 +97,11 @@ iframe {
 .brand-text {
   display: flex;
   flex-direction: column;
-  line-height: 1;
+  line-height: 0.98;
 }
 
 .brand-text strong {
-  font-size: 1.1rem;
+  font-size: 1.16rem;
   font-weight: 800;
   font-style: italic;
   letter-spacing: -0.01em;
@@ -109,7 +109,7 @@ iframe {
 
 .brand-text span {
   color: var(--color-muted);
-  font-size: 0.98rem;
+  font-size: 1rem;
   font-weight: 700;
   font-style: italic;
 }
@@ -151,12 +151,12 @@ iframe {
 .hero,
 .page-hero {
   background:
-    radial-gradient(circle at top left, rgba(215, 167, 45, 0.12), transparent 28%),
-    linear-gradient(180deg, #f1f6f3 0%, #ffffff 100%);
+    radial-gradient(circle at top left, rgba(164, 201, 236, 0.18), transparent 30%),
+    linear-gradient(180deg, #eff6fc 0%, #f9fcff 100%);
 }
 
 .hero {
-  padding: 5.5rem 0 4.5rem;
+  padding: 5.25rem 0 4.5rem;
 }
 
 .hero-refined {
@@ -164,7 +164,7 @@ iframe {
 }
 
 .page-hero {
-  padding: 4.75rem 0 3rem;
+  padding: 4.5rem 0 3rem;
 }
 
 .hero-grid,
@@ -175,8 +175,8 @@ iframe {
 }
 
 .hero-grid {
-  grid-template-columns: minmax(0, 1.02fr) minmax(340px, 0.98fr);
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 1.02fr);
+  align-items: start;
 }
 
 .hero-grid-enhanced {
@@ -185,7 +185,7 @@ iframe {
 
 .hero-visual-stack {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.35rem;
   align-content: start;
 }
 
@@ -199,20 +199,20 @@ iframe {
 .split-section h2,
 .cta-box h2,
 .ugcs-intro-card h2 {
-  line-height: 1.05;
+  line-height: 1.08;
   margin: 0 0 1rem;
   letter-spacing: -0.03em;
 }
 
 .hero-copy h1 {
-  font-size: clamp(2.5rem, 4.8vw, 4.4rem);
-  max-width: 11ch;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  max-width: 12ch;
   text-wrap: balance;
 }
 
 .hero-lead {
-  font-size: 1.12rem;
-  max-width: 56ch;
+  font-size: 1.08rem;
+  max-width: 54ch;
 }
 
 .page-hero h1,
@@ -220,7 +220,8 @@ iframe {
 .split-section h2,
 .cta-box h2,
 .ugcs-intro-card h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.9rem, 3.8vw, 2.8rem);
+  text-wrap: balance;
 }
 
 .hero-copy p,
@@ -243,7 +244,7 @@ iframe {
 
 .eyebrow {
   display: inline-block;
-  margin-bottom: 1rem;
+  margin-bottom: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.16em;
   font-size: 0.78rem;
@@ -258,13 +259,13 @@ iframe {
 }
 
 .page-hero .centered-heading h1 {
-  max-width: 15ch;
+  max-width: 16ch;
   margin-left: auto;
   margin-right: auto;
 }
 
 .page-hero .centered-heading p {
-  max-width: 62ch;
+  max-width: 60ch;
   margin-left: auto;
   margin-right: auto;
 }
@@ -273,7 +274,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin: 2rem 0 1.8rem;
+  margin: 1.8rem 0 1.6rem;
 }
 
 .btn {
@@ -381,7 +382,7 @@ iframe {
 }
 
 .hero-card-bold {
-  min-height: 560px;
+  min-height: 590px;
   box-shadow: 0 24px 55px rgba(15, 23, 32, 0.14);
 }
 
@@ -391,18 +392,18 @@ iframe {
 }
 
 .hero-card-image-bold {
-  min-height: 560px;
-  background: url('../../home.webp') 58% center/cover no-repeat;
+  min-height: 430px;
+  background: url('../../home.webp') 26% center/contain no-repeat;
+  background-color: #eef2f5;
 }
 
 .hero-card-content {
-  padding: 1.6rem 1.75rem 1.8rem;
+  padding: 1.5rem 1.7rem 1.7rem;
 }
 
 .hero-card-content-overlay {
   position: static;
   inset: auto;
-  z-index: auto;
   background: #ffffff;
   color: var(--color-text);
   border-top: 1px solid rgba(216, 225, 220, 0.85);
@@ -434,7 +435,7 @@ iframe {
 
 .secondary-hero-image {
   width: 100%;
-  height: 320px;
+  height: 280px;
   object-fit: cover;
   object-position: center center;
   filter: none;
@@ -444,7 +445,7 @@ iframe {
 .secondary-hero-overlay {
   position: static;
   inset: auto;
-  padding: 1.4rem 1.5rem 1.6rem;
+  padding: 1.35rem 1.45rem 1.5rem;
   background: #ffffff;
   color: var(--color-text);
   border-top: 1px solid rgba(216, 225, 220, 0.85);
@@ -456,16 +457,17 @@ iframe {
 
 .secondary-hero-overlay h3 {
   margin: 0;
-  font-size: 1.35rem;
+  font-size: 1.28rem;
   line-height: 1.25;
+  text-wrap: balance;
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 4.6rem 0;
 }
 
 .section-soft {
-  background: linear-gradient(180deg, rgba(244, 248, 246, 0.7), rgba(255, 255, 255, 0));
+  background: linear-gradient(180deg, rgba(238, 244, 251, 0.92), rgba(250, 252, 255, 0.9));
 }
 
 .section-alt {
@@ -474,7 +476,7 @@ iframe {
 
 .section-heading {
   max-width: 760px;
-  margin: 0 auto 2.6rem;
+  margin: 0 auto 2.35rem;
 }
 
 .cards {
@@ -514,11 +516,12 @@ iframe {
 .site-footer h4,
 .gallery-item figcaption {
   margin-top: 0;
+  text-wrap: balance;
 }
 
 .feature-card,
 .polished-card {
-  background: linear-gradient(180deg, #ffffff 0%, #fbfdfb 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
 }
 
 .outreach-card,
@@ -552,12 +555,12 @@ iframe {
 }
 
 .refined-split {
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.92fr);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.95fr);
   align-items: center;
 }
 
 .split-section {
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.08fr 0.92fr;
   align-items: center;
 }
 
@@ -795,9 +798,18 @@ iframe {
     padding-top: 4.5rem;
   }
 
-  .hero-card-bold,
+  .hero-copy h1 {
+    max-width: 100%;
+  }
+
+  .hero-card-bold {
+    min-height: auto;
+  }
+
   .hero-card-image-bold {
-    min-height: 420px;
+    min-height: 320px;
+    background-position: 30% center;
+    background-size: cover;
   }
 
   .secondary-hero-image {
@@ -823,7 +835,7 @@ iframe {
 
   .site-nav {
     position: absolute;
-    top: 88px;
+    top: 96px;
     right: 1rem;
     left: 1rem;
     display: none;
