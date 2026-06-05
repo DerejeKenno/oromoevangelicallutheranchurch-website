@@ -508,7 +508,8 @@ iframe {
   background: linear-gradient(180deg, #ffffff 0%, #fbfdfb 100%);
 }
 
-.outreach-card {
+.outreach-card,
+.balanced-card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -522,6 +523,19 @@ iframe {
 .outreach-card .btn {
   margin-top: auto;
   align-self: flex-start;
+}
+
+.about-values-panel {
+  align-self: stretch;
+}
+
+.about-values-panel ul {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.ministry-balance-grid .balanced-card {
+  min-height: 100%;
 }
 
 .refined-split {
