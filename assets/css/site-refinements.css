@@ -18,6 +18,29 @@
   content: none !important;
 }
 
+/* Keep shared page spacing balanced and avoid large empty gaps between content blocks. */
+.section {
+  padding-top: clamp(2.75rem, 5vw, 3.65rem);
+  padding-bottom: clamp(2.75rem, 5vw, 3.65rem);
+}
+
+.page-hero {
+  padding-top: clamp(3.15rem, 5vw, 4.1rem);
+  padding-bottom: clamp(2.25rem, 4vw, 2.85rem);
+}
+
+.cards {
+  gap: clamp(1rem, 2vw, 1.35rem);
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  margin-top: 0;
+}
+
 /* Keep UGCS intro closer to the hero copy. */
 .ugcs-section {
   padding-top: 1.25rem;
