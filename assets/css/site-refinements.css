@@ -41,7 +41,19 @@
   margin-top: 0;
 }
 
-/* Keep UGCS intro closer to the hero copy. */
+/* Keep LCM intro closer to the hero copy. */
 .ugcs-section {
   padding-top: 1.25rem;
+}
+
+.site-view-counter {
+  margin: 0.35rem 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.site-view-counter span {
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 800;
 }
