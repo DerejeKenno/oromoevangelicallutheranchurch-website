@@ -54,22 +54,7 @@
       <section class="section gallery-section">
         <div class="container gallery-showcase">
           <div class="gallery-featured image-card">
-            <img id="featured-gallery-image" src="chlife1.jpg" alt="Church members in worship and fellowship" />
-          </div>
-
-          <div class="gallery-grid enhanced-gallery-grid gallery-thumbnails">
-            <figure class="gallery-item" data-full="chlife2.jpg" data-alt="Congregation gathered together in church life">
-              <img src="chlife2.jpg" alt="Congregation gathered together in church life" />
-            </figure>
-            <figure class="gallery-item" data-full="chlife6.jpg" data-alt="Special moment from church fellowship">
-              <img src="chlife6.jpg" alt="Special moment from church fellowship" />
-            </figure>
-            <figure class="gallery-item" data-full="moms.jpg" data-alt="Church members gathered in fellowship">
-              <img src="moms.jpg" alt="Church members gathered in fellowship" />
-            </figure>
-            <figure class="gallery-item" data-full="moms2.jpg" data-alt="Joyful church life and community connection">
-              <img src="moms2.jpg" alt="Joyful church life and community connection" />
-            </figure>
+            <img id="featured-gallery-image" src="chlife2.jpg" alt="Congregation gathered together in church life" />
           </div>
         </div>
       </section>
@@ -82,18 +67,5 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
-    <script>
-      const featuredImage = document.getElementById('featured-gallery-image');
-      const galleryItems = document.querySelectorAll('.gallery-item');
-
-      galleryItems.forEach((item) => {
-        item.addEventListener('click', () => {
-          galleryItems.forEach((card) => card.classList.remove('gallery-item-active'));
-          item.classList.add('gallery-item-active');
-          featuredImage.src = item.dataset.full;
-          featuredImage.alt = item.dataset.alt;
-        });
-      });
-    </script>
   </body>
 </html>
