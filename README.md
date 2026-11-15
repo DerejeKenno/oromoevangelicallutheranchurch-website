@@ -2,6 +2,9 @@
 
 This repository contains the static website for Elshaddai Oromo Evangelical Church.
 
+## Website
+https://www.elshaddaioromoevangelicalchurch.org/
+
 ## Stack
 - HTML
 - CSS
