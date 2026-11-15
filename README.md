@@ -1,6 +1,6 @@
-# Oromo Evangelical Lutheran Church Website
+# Elshaddai Oromo Evangelical Church Website
 
-This repository contains the static website for Oromo Evangelical Lutheran Church.
+This repository contains the static website for Elshaddai Oromo Evangelical Church.
 
 ## Stack
 - HTML
